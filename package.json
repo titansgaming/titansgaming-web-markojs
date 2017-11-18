@@ -1,0 +1,50 @@
+{
+  "name": "titansgaming-web",
+  "version": "1.0.0",
+  "description": "Titans Gaming website built with MarkoJS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/titansgaming/titansgaming-web"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "prettier": "^1.5.2"
+  },
+  "dependencies": {
+    "compression": "^1.7.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "express": "^4.16.2",
+    "lasso": "^3.0.0",
+    "marko": "^4.2.4",
+    "marko-starter": "^1.0.0"
+  },
+  "scripts": {
+    "start": "marko-starter server",
+    "build": "NODE_ENV=production marko-starter build",
+    "serve-static": "NODE_ENV=production marko-starter serve-static",
+    "lint": "eslint ./*.js src/",
+    "test": "yarn run lint",
+    "prettier": "prettier src/**/*.{js,css,less} *.js --write"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "eslintIgnore": [
+    "*.marko.js"
+  ],
+  "private": true
+}

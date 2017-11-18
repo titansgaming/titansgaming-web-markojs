@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html lang="en-US"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title
+      if(input.title)
+        include(input.title)
+        -- &nbsp;-&nbsp;
+      --
+      Titans Gaming
+  body
+    header
+      nav.menu
+        a href="/" -- Home
+        a href="/mumble" -- Mumble
+    div.content
+      include(input.content)
